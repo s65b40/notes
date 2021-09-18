@@ -1,0 +1,26 @@
+教程地址
+http://39.96.43.154:8888/d/134-hpc
+
+登录
+ssh hpc
+
+使用GPU
+ssh gpu07 连接gpu07
+cat /etc/motd 查看GPU使用状态
+
+上传文件 FileZila
+代码 FileZila/Git
+
+提交交互式任务
+salloc [申请资源]
+salloc -p compute -N1 --gres=gpu:titan_xp:1 -t 24:00:00
+-N 节点数量
+--cpus-per-task=单进程cpu核心数
+--gres=gpu:GPU类型:单节点GPU卡数
+-t 最长运行时间
+-p 使用的分区
+
+squeue 查看队列
+
+scir-account --help 计费结果
+
